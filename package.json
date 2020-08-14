@@ -17,6 +17,15 @@
   },
   "homepage": "https://github.com/simandebvu/sopranos-restaurant#readme",
   "devDependencies": {
+    "sass": "^1.26.10",
+    "sass-loader": "^9.0.3",
+    "webpack": "^4.44.1",
     "webpack-cli": "^3.3.12"
+  },
+  "dependencies": {
+    "bootstrap": "^4.5.2",
+    "css-loader": "^4.2.1",
+    "popper.js": "^1.16.1",
+    "style-loader": "^1.2.1"
   }
 }
