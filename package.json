@@ -1,0 +1,22 @@
+{
+  "name": "y",
+  "version": "1.0.0",
+  "description": "Javascript Based Website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/simandebvu/sopranos-restaurant.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/simandebvu/sopranos-restaurant/issues"
+  },
+  "homepage": "https://github.com/simandebvu/sopranos-restaurant#readme",
+  "devDependencies": {
+    "webpack-cli": "^3.3.12"
+  }
+}
