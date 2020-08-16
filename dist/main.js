@@ -164,7 +164,7 @@ eval("var api = __webpack_require__(/*! ../../node_modules/style-loader/dist/run
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var bootstrap_dist_css_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! bootstrap/dist/css/bootstrap.min.css */ \"./node_modules/bootstrap/dist/css/bootstrap.min.css\");\n/* harmony import */ var bootstrap_dist_css_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(bootstrap_dist_css_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _assets_style_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./assets/style.scss */ \"./src/assets/style.scss\");\n/* harmony import */ var _assets_style_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_assets_style_scss__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _modules_contact__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/contact */ \"./src/modules/contact.js\");\n\r\n\r\n\r\n\r\nconst renderMenu = (() => {\r\n    const container = document.querySelector('#content');\r\n    const wrapper = document.createElement('div');\r\n    wrapper.classList.add('wrapper');\r\n    const tabs = document.createElement('div');\r\n    tabs.classList.add('tabs');\r\n\r\n    const createMenuTabs = (i)=> {\r\n        let div = document.createElement('div');\r\n        div.className = \"tab\";\r\n        let menuName = '';\r\n        let div_content = document.createElement('div');\r\n        div_content.className = \"tab-content\";\r\n\r\n        let input = document.createElement('input');\r\n        input.type = 'radio';\r\n        input.name = 'css-tabs';\r\n        input.id = `tab-${i+1}`;\r\n        switch(i) {\r\n            case 0:\r\n                input.setAttribute('checked', 'checked');\r\n                menuName = \"Home\";\r\n                break;\r\n                case 1:\r\n                    menuName = \"Menu\";\r\n                    break;\r\n                    case 2:\r\n                        menuName = \"Contacts\";\r\n                        Object(_modules_contact__WEBPACK_IMPORTED_MODULE_2__[\"default\"])(div_content);\r\n                break;\r\n            default:\r\n              // code block\r\n        }\r\n        input.classList.add(\"tab-switch\");\r\n\r\n        let label = document.createElement('label');\r\n        label.htmlFor = `tab-${i+1}`;\r\n        label.classList.add(\"tab-label\");\r\n        label.innerHTML = menuName;\r\n\r\n        div_content.classList.add('w-100');\r\n       \r\n\r\n\r\n        div.appendChild(input);\r\n        div.appendChild(label);\r\n        div.appendChild(div_content);\r\n\r\n        tabs.appendChild(div);\r\n    }\r\n\r\n    for(let i = 0; i < 3; i++) {\r\n        createMenuTabs(i);\r\n    }\r\n    \r\n    wrapper.appendChild(tabs);\r\n    container.appendChild(wrapper);\r\n})()\r\n\r\n\r\n\n\n//# sourceURL=webpack:///./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var bootstrap_dist_css_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! bootstrap/dist/css/bootstrap.min.css */ \"./node_modules/bootstrap/dist/css/bootstrap.min.css\");\n/* harmony import */ var bootstrap_dist_css_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(bootstrap_dist_css_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _assets_style_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./assets/style.scss */ \"./src/assets/style.scss\");\n/* harmony import */ var _assets_style_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_assets_style_scss__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _modules_contact__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/contact */ \"./src/modules/contact.js\");\n/* harmony import */ var _modules_navigation__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/navigation */ \"./src/modules/navigation.js\");\n/* harmony import */ var _modules_menu__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/menu */ \"./src/modules/menu.js\");\n/* harmony import */ var _modules_home__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/home */ \"./src/modules/home.js\");\n\n\n\n\n\n\n\n\n\nconst renderMenu = (() => {\n  const container = document.querySelector('#content');\n  const wrapper = document.createElement('div');\n  wrapper.classList.add('wrapper');\n  const tabs = document.createElement('div');\n  tabs.classList.add('tabs');\n  const mainMenu = Object(_modules_navigation__WEBPACK_IMPORTED_MODULE_3__[\"default\"])();\n  mainMenu.createMenuItem(0, 'Home', true, tabs, _modules_home__WEBPACK_IMPORTED_MODULE_5__[\"default\"]);\n  mainMenu.createMenuItem(1, 'Menu', false, tabs, _modules_menu__WEBPACK_IMPORTED_MODULE_4__[\"default\"]);\n  mainMenu.createMenuItem(2, 'Contact', false, tabs, _modules_contact__WEBPACK_IMPORTED_MODULE_2__[\"default\"]);\n\n\n  wrapper.appendChild(tabs);\n  container.appendChild(wrapper);\n})();\n\n\n//# sourceURL=webpack:///./src/index.js?");
 
 /***/ }),
 
@@ -176,7 +176,43 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var boot
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return contactDetails; });\nfunction contactDetails(parent) {\r\n    \r\n    // const pageTitle = document.createElement(\"h1\");\r\n    // pageTitle.setAttribute(\"class\", \"page-title\");\r\n    // pageTitle.textContent = \"Contact us\";\r\n    \r\n    const contact = document.createElement(\"div\");\r\n    contact.setAttribute(\"id\", \"contact\");\r\n\r\n    const contactP = document.createElement(\"p\");\r\n    contactP.textContent = \"Contact us at: +263 123456789\"\r\n    contact.appendChild(contactP);\r\n\r\n    parent.innerHTML = \"\";\r\n    //parent.appendChild(pageTitle);\r\n    parent.appendChild(contact);\r\n}\n\n//# sourceURL=webpack:///./src/modules/contact.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return contactDetails; });\nfunction contactDetails(parent) {\n  // const pageTitle = document.createElement(\"h1\");\n  // pageTitle.setAttribute(\"class\", \"page-title\");\n  // pageTitle.textContent = \"Contact us\";\n\n  const contact = document.createElement('div');\n  contact.setAttribute('id', 'contact');\n\n  const contactP = document.createElement('p');\n  contactP.textContent = 'Contact us at: +263 123456789';\n  contact.appendChild(contactP);\n\n  parent.innerHTML = '';\n  // parent.appendChild(pageTitle);\n  parent.appendChild(contact);\n}\n\n//# sourceURL=webpack:///./src/modules/contact.js?");
+
+/***/ }),
+
+/***/ "./src/modules/home.js":
+/*!*****************************!*\
+  !*** ./src/modules/home.js ***!
+  \*****************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return homeDetails; });\nfunction homeDetails(parent) {\r\n  // const pageTitle = document.createElement(\"h1\");\r\n  // pageTitle.setAttribute(\"class\", \"page-title\");\r\n  // pageTitle.textContent = \"Contact us\";\r\n\r\n  const contact = document.createElement('div');\r\n  contact.setAttribute('id', 'contact');\r\n\r\n  const contactP = document.createElement('p');\r\n  contactP.textContent = 'Home here ';\r\n  contact.appendChild(contactP);\r\n\r\n  parent.innerHTML = '';\r\n  // parent.appendChild(pageTitle);\r\n  parent.appendChild(contact);\r\n}\n\n//# sourceURL=webpack:///./src/modules/home.js?");
+
+/***/ }),
+
+/***/ "./src/modules/menu.js":
+/*!*****************************!*\
+  !*** ./src/modules/menu.js ***!
+  \*****************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return menuDetails; });\nfunction menuDetails(parent) {\r\n  // const pageTitle = document.createElement(\"h1\");\r\n  // pageTitle.setAttribute(\"class\", \"page-title\");\r\n  // pageTitle.textContent = \"Contact us\";\r\n\r\n  const contact = document.createElement('div');\r\n  contact.setAttribute('id', 'contact');\r\n\r\n  const contactP = document.createElement('p');\r\n  contactP.textContent = 'Menu here ';\r\n  contact.appendChild(contactP);\r\n\r\n  parent.innerHTML = '';\r\n  // parent.appendChild(pageTitle);\r\n  parent.appendChild(contact);\r\n}\n\n//# sourceURL=webpack:///./src/modules/menu.js?");
+
+/***/ }),
+
+/***/ "./src/modules/navigation.js":
+/*!***********************************!*\
+  !*** ./src/modules/navigation.js ***!
+  \***********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\nconst menu = () => {\n  const createMenuItem = (i, menuName, isPrimary, tabs, contactDetails) => {\n    const div = document.createElement('div');\n    div.className = 'tab';\n    const divContent = document.createElement('div');\n    divContent.className = 'tab-content';\n\n    const input = document.createElement('input');\n    input.type = 'radio';\n    input.name = 'css-tabs';\n    input.id = `tab-${i + 1}`;\n    if (isPrimary) {\n      input.setAttribute('checked', 'checked');\n    }\n    contactDetails(divContent);\n    // .log(typeof contactDetails);\n    input.classList.add('tab-switch');\n\n    const label = document.createElement('label');\n    label.htmlFor = `tab-${i + 1}`;\n    label.classList.add('tab-label');\n    label.innerHTML = menuName;\n\n    divContent.classList.add('w-100');\n\n    div.appendChild(input);\n    div.appendChild(label);\n    div.appendChild(divContent);\n    tabs.appendChild(div);\n  };\n\n  return { createMenuItem };\n};\n/* harmony default export */ __webpack_exports__[\"default\"] = (menu);\n\n//# sourceURL=webpack:///./src/modules/navigation.js?");
 
 /***/ })
 

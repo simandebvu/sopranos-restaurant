@@ -1,4 +1,4 @@
-export default function menuDetails(parent) {
+export default function homeDetails(parent) {
   // const pageTitle = document.createElement("h1");
   // pageTitle.setAttribute("class", "page-title");
   // pageTitle.textContent = "Contact us";
@@ -7,7 +7,7 @@ export default function menuDetails(parent) {
   contact.setAttribute('id', 'contact');
 
   const contactP = document.createElement('p');
-  contactP.textContent = 'Menu here ';
+  contactP.textContent = 'Home here ';
   contact.appendChild(contactP);
 
   parent.innerHTML = '';
