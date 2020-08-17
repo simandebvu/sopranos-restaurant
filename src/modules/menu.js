@@ -1,16 +1,9 @@
-export default function menuDetails(parent) {
-  // const pageTitle = document.createElement("h1");
-  // pageTitle.setAttribute("class", "page-title");
-  // pageTitle.textContent = "Contact us";
+import display from './display';
 
-  const contact = document.createElement('div');
-  contact.setAttribute('id', 'contact');
+const loadMenu = (() => {
+  const appDisplay = display();
+  const welcomeMessage = appDisplay.createMenuCards('MENUWelcome to sopranos! Have fun and eat well!!!');
+  return welcomeMessage;
+})();
 
-  const contactP = document.createElement('p');
-  contactP.textContent = 'Menu here ';
-  contact.appendChild(contactP);
-
-  parent.innerHTML = '';
-  // parent.appendChild(pageTitle);
-  parent.appendChild(contact);
-}
+export default loadMenu;
