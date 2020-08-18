@@ -1,36 +1,44 @@
 * {
   box-sizing: border-box;
 }
+
 body {
   font-family: "Open Sans";
   background: #2c3e50;
   color: #ecf0f1;
   line-height: 1.618em;
 }
+
 .wrapper {
   max-width: 65rem;
   width: 100%;
   margin: 0 auto;
 }
+
 .tabs {
   position: relative;
   margin: 3rem 0;
   background: #1abc9c;
 }
+
 .tabs::before,
 .tabs::after {
   content: "";
   display: table;
 }
+
 .tabs::after {
   clear: both;
 }
+
 .tab {
   float: left;
 }
+
 .tab-switch {
   display: none;
 }
+
 .tab-label {
   position: relative;
   display: block;
@@ -44,10 +52,12 @@ body {
   top: 0;
   transition: all 0.25s;
 }
+
 .tab-label:hover {
   top: -0.25rem;
   transition: top 0.25s;
 }
+
 .tab-content {
   position: absolute;
   z-index: 1;
@@ -60,6 +70,7 @@ body {
   opacity: 0;
   transition: all 0.35s;
 }
+
 .tab-switch:checked + .tab-label {
   background: #fff;
   color: #2c3e50;
@@ -69,6 +80,7 @@ body {
   z-index: 1;
   top: -0.0625rem;
 }
+
 .tab-switch:checked + label + .tab-content {
   z-index: 2;
   opacity: 1;
