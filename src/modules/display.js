@@ -70,7 +70,6 @@ const display = () => {
   const createMenuCard = (foodItems) => {
     const cardsContainer = document.createElement('div');
     cardsContainer.classList.add('d-flex', 'flex-wrap', 'justify-content-around');
-    // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/entries#Description
     Object.entries(foodItems).forEach(entry => {
       const [key, value] = entry;
       const element = document.createElement('div');
