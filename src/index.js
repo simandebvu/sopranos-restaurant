@@ -10,7 +10,6 @@ import loadContact from './modules/contact';
 const startApp = (() => {
   const appDisplay = display();
   const tabMenu = appDisplay.mainMenu();
-  const pages = [];
   const menuItems = [{
     index: 0, title: 'Home', isPrimary: true, pageContent: loadHome,
   }, {
@@ -22,6 +21,5 @@ const startApp = (() => {
 
   menuItems.forEach(item => {
     tabMenu.createMenuItem(item);
-    pages[item.title.toString] = item;
   });
 })();
