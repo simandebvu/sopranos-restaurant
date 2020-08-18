@@ -12,4 +12,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Boostrap Styling for Menu Items.
 - Separate Module for Display. Single responsibility.
 
+### Fixed
+
+- Removed comments in code.
+- Necessary run common commands added in package.json inside `scripts'
 
