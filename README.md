@@ -43,7 +43,7 @@
   
 ## Live Demo
 
-[Live Demo Link](#)
+[Live Demo Link](https://simandebvu.github.io/sopranos-restaurant/)
 
 
 ## Running Locally
