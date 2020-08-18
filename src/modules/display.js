@@ -42,20 +42,20 @@ const display = () => {
   };
 
 
-  const createWelcomeMessage = (t) => {
-    // TODO random funny quotes
+  const createWelcomeMessage = (t, blockQuoteText, blockCitationText) => {
     const blockQuote = document.createElement('blockquote');
     blockQuote.classList.add('blockquote');
     const blockParagraph = document.createElement('p');
     blockParagraph.classList.add('mb-0', 'text-center');
-    blockParagraph.innerHTML = 'Things worth having are worth waiting for.';
+    blockParagraph.innerHTML = blockQuoteText;
     const blockFooter = document.createElement('footer');
     blockFooter.classList.add('blockquote-footer');
-    blockFooter.innerHTML = 'Me, preheating the oven.';
+    blockFooter.innerHTML = blockCitationText;
     blockQuote.appendChild(blockParagraph);
     blockQuote.appendChild(blockFooter);
     const element = document.createElement('div');
     const paragraph = document.createElement('p');
+    paragraph.classList.add('lead');
     paragraph.innerText = t;
     element.appendChild(blockQuote);
     element.appendChild(paragraph);
@@ -63,38 +63,46 @@ const display = () => {
     return element;
   };
 
-  const createMenuCards = (t) => {
-    const element = document.createElement('div');
-    element.classList.add('card', 'col-md-4');
-    const menuImage = document.createElement('img');
-    menuImage.setAttribute('src', 'assets/breakfast.jpg');
-    menuImage.setAttribute('alt', 'a truly tempting meal');
-    element.appendChild(menuImage);
-    const cardBody = document.createElement('div');
-    cardBody.classList.add('card-body');
-    const cardTitle = document.createElement('h5');
-    cardTitle.innerHTML = 'My title';
-    const cardText = document.createElement('p');
-    cardText.classList.add('card-text');
-    const cardLink = document.createElement('a');
-    cardLink.setAttribute('href', 'https://simandebvu.github.io');
-    cardLink.classList.add('btn', 'btn-primary');
-    cardLink.innerHTML = 'I want to eat this!';
+  const createMenuCard = (foodItems) => {
+    const cardsContainer = document.createElement('div');
+    cardsContainer.classList.add('d-flex', 'flex-wrap', 'justify-content-between');
+    // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/entries#Description
+    Object.entries(foodItems).forEach(entry => {
+      const [key, value] = entry;
+      const element = document.createElement('div');
+      element.setAttribute('index', key);
+      element.classList.add('card', 'col-md-3', 'mx-1');
+      const menuImage = document.createElement('img');
+      menuImage.classList.add('img-thumbnail');
+      menuImage.setAttribute('src', value.imagePath);
+      menuImage.setAttribute('alt', 'a truly tempting meal');
+      element.appendChild(menuImage);
+      const cardBody = document.createElement('div');
+      cardBody.classList.add('card-body');
+      const cardTitle = document.createElement('h5');
+      cardTitle.innerHTML = value.title;
+      const cardText = document.createElement('p');
+      cardText.classList.add('card-text');
+      const cardLink = document.createElement('a');
+      cardLink.setAttribute('href', 'https://simandebvu.github.io');
+      cardLink.classList.add('btn', 'btn-danger', 'font-weight-bold');
+      cardLink.innerHTML = value.price;
 
-    const paragraph = document.createElement('p');
-    paragraph.innerText = t;
-    cardBody.appendChild(cardTitle);
-    cardBody.appendChild(cardText);
-    cardBody.appendChild(cardLink);
-    element.appendChild(menuImage);
-    element.appendChild(cardBody);
-    element.appendChild(paragraph);
-
-    return element;
+      const paragraph = document.createElement('p');
+      paragraph.innerText = value.description;
+      cardBody.appendChild(cardTitle);
+      cardBody.appendChild(cardText);
+      cardBody.appendChild(cardLink);
+      element.appendChild(menuImage);
+      element.appendChild(cardBody);
+      element.appendChild(paragraph);
+      cardsContainer.appendChild(element);
+    });
+    return cardsContainer;
   };
 
   return {
-    mainMenu, createWelcomeMessage, createMenuCards,
+    mainMenu, createWelcomeMessage, createMenuCard,
   };
 };
 export default display;

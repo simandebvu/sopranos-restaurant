@@ -8,7 +8,7 @@ body {
   line-height: 1.618em;
 }
 .wrapper {
-  max-width: 50rem;
+  max-width: 65rem;
   width: 100%;
   margin: 0 auto;
 }
@@ -16,7 +16,6 @@ body {
   position: relative;
   margin: 3rem 0;
   background: #1abc9c;
-  height: 14.75rem;
 }
 .tabs::before,
 .tabs::after {
@@ -50,7 +49,6 @@ body {
   transition: top 0.25s;
 }
 .tab-content {
-  height: 12rem;
   position: absolute;
   z-index: 1;
   top: 2.75em;
@@ -75,4 +73,8 @@ body {
   z-index: 2;
   opacity: 1;
   transition: all 0.35s;
+}
+
+.img-thumbnail {
+  height: 215px;
 }

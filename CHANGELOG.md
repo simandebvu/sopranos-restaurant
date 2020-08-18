@@ -6,5 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-## [1.0.0] - 2017-06-20
+## [1.0.0] - 2020-08-18
 ### Added
+- Random Quotes Generated on page load.
+- Boostrap Styling for Menu Items.
+- Separate Module for Display. Single responsibility.
+
+
