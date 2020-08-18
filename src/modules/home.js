@@ -6,7 +6,9 @@ const loadHome = (() => {
 
   const random = Math.floor(Math.random() * funnyQuotes.length);
   const selectedQuote = funnyQuotes[random];
-  const welcomeMessage = appDisplay.createWelcomeMessage('Welcome to sopranos! Have fun and eat well!!!\n This has been a dream to, in a small way- honour what was the best restaurant in Zimbabwe. \n So feel very welcome to browse though this awesome meal list and choose the dish that calls your taste buds the most!', selectedQuote.firstLine, selectedQuote.secondLine);
+  const welcomeMessage = appDisplay.createWelcomeMessage(
+    'Sopranos Restaurant', 'Welcome to sopranos! Have fun and eat well!!!\n This has been a dream to, in a small way- honour what was the best restaurant in Zimbabwe. \n So feel very welcome to browse though this awesome meal list and choose the dish that calls your taste buds the most!', selectedQuote.firstLine, selectedQuote.secondLine,
+  );
   return welcomeMessage;
 })();
 
