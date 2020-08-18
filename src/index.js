@@ -5,6 +5,8 @@ import loadHome from './modules/home';
 import loadMenu from './modules/menu';
 import loadContact from './modules/contact';
 
+// IIFE
+// eslint-disable-next-line no-unused-vars
 const startApp = (() => {
   const appDisplay = display();
   const tabMenu = appDisplay.mainMenu();
