@@ -1,0 +1,43 @@
+{
+  "name": "y",
+  "version": "1.0.0",
+  "description": "Javascript Based Website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "watch": "webpack --watch",
+    "server": "webpack-dev-server --open",
+    "lint:js": "eslint",
+    "lint:css": "stylelint **/*.{css,scss}"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/simandebvu/sopranos-restaurant.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/simandebvu/sopranos-restaurant/issues"
+  },
+  "homepage": "https://github.com/simandebvu/sopranos-restaurant#readme",
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.1.0",
+    "eslint-plugin-import": "^2.20.2",
+    "sass": "^1.26.10",
+    "sass-loader": "^9.0.3",
+    "stylelint": "^13.3.3",
+    "stylelint-config-standard": "^20.0.0",
+    "stylelint-csstree-validator": "^1.8.0",
+    "stylelint-scss": "^3.17.2",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12"
+  },
+  "dependencies": {
+    "bootstrap": "^4.5.2",
+    "css-loader": "^4.2.1",
+    "popper.js": "^1.16.1",
+    "style-loader": "^1.2.1"
+  }
+}
